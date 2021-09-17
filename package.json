@@ -1,0 +1,31 @@
+{
+  "name": "module3-week3day3-homework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "lite": "lite-server",
+    "scss": "node-sass -o css/ css/",
+    "start": "npm run lite",
+    "dev": "lite-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IvyLiu0/Module3-Week3Day3-Homework.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IvyLiu0/Module3-Week3Day3-Homework/issues"
+  },
+  "homepage": "https://github.com/IvyLiu0/Module3-Week3Day3-Homework#readme",
+  "devDependencies": {
+    "lite-server": "^2.6.1",
+    "node-sass": "^4.14.1",
+    "parallelshell": "^3.0.1"
+  },
+  "dependencies": {
+    "onchange": "^7.1.0"
+  }
+}

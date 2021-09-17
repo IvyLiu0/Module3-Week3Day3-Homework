@@ -1,0 +1,73 @@
+/* Variables */
+$headfont: 'Sacramento', 'cursive';
+$bodyfont: Arial, Helvetica, Sans-Serif;
+
+@mixin style ($property1, $property2, $property3, $property4, $property5) {
+    background-color: $property1;
+    height: $property2;
+    width: $property3;
+    position: $property4;
+    margin: $property5;
+}
+
+@mixin button {
+
+}
+
+@import "colors";
+
+body {
+    background-color: $outsidecolor;
+    @import "nav";
+
+    /* Nest Main */
+    main {
+        width: 1350px;
+        min-height:535px;
+        background-color: $middlecolor;
+        display: flex;
+        margin-left: 20px;
+
+        #intro-text {
+            @include style($insidecolor,500px, 40%, relative, 20px);
+            float: left;
+            width: 650px;
+            margin-right: 0px;
+
+            span {
+                font-family: $headfont;
+                color: $textcolor;
+            }
+            h3 {
+                font-family: $bodyfont;
+                color: $textcolor;
+            }
+            p {
+                font-family: $bodyfont;
+                color: $textcolor;
+            }
+            // Mixin or Extend for button
+            .submit-button {
+                @include button;
+            }
+        }
+        #intro-image {
+            @include style(none, 500px, 60%, relative, 20px);
+            float: left;
+            margin-left: 0px;
+
+            img {
+                height: 500px;
+            }
+        }
+    }
+
+    /*footer*/
+    footer{
+        font-family: $bodyfont;
+        color: $textcolor;
+        margin: 30px 0 0 60px;
+    }
+}
+
+
