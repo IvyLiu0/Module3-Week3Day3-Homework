@@ -1,14 +1,14 @@
 /* Variables */
 body {
   background-color: #daaa0e;
-  /* Nest Nav */
   margin-left: 40px;
+  /* Nest Nav */
   /* Nest Main */
   /*footer*/
 }
 body nav {
   margin-top: 30px;
-  margin-left: 20px;
+  margin-left: 30px;
   margin-bottom: 40px;
 }
 body nav ul {

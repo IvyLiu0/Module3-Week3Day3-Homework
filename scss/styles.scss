@@ -36,9 +36,10 @@ $bodyfont: Arial, Helvetica, Sans-Serif;
 
 body {
     background-color: $outsidecolor;
-    @import "nav";
     margin-left: 40px;
 
+    @import "nav";
+    
     /* Nest Main */
     main {
         width: 1350px;
