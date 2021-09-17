@@ -10,8 +10,26 @@ $bodyfont: Arial, Helvetica, Sans-Serif;
     margin: $property5;
 }
 
-@mixin button {
+@mixin text ($style1, $style2, $style3, $style4, $style5) {
+    position: $style1;
+    text-align: $style2;
+    top: $style3;
+    left: $style4;
+    transform: $style5;
+}
 
+@mixin button {
+    background-color: $outsidecolor;
+    border: none;
+    color: $middlecolor;
+    font-family: $bodyfont;
+    height: 40px;
+    width: 120px;
+    position: absolute;
+    text-align: center;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -120%);
 }
 
 @import "colors";
@@ -19,6 +37,7 @@ $bodyfont: Arial, Helvetica, Sans-Serif;
 body {
     background-color: $outsidecolor;
     @import "nav";
+    margin-left: 40px;
 
     /* Nest Main */
     main {
@@ -26,7 +45,6 @@ body {
         min-height:535px;
         background-color: $middlecolor;
         display: flex;
-        margin-left: 20px;
 
         #intro-text {
             @include style($insidecolor,500px, 40%, relative, 20px);
@@ -37,17 +55,22 @@ body {
             span {
                 font-family: $headfont;
                 color: $textcolor;
+                font-size: 30px;
+                @include text (absolute, center, 35%, 50%, translate(-45%, -120%));
             }
             h3 {
                 font-family: $bodyfont;
                 color: $textcolor;
+                font-size: 30px;
+                @include text (absolute, center, 50%, 40%, translate(-35%, -120%));
             }
             p {
                 font-family: $bodyfont;
                 color: $textcolor;
+                @include text (absolute, center, 60%, 0%, translate(6%, -120%));
             }
             // Mixin or Extend for button
-            .submit-button {
+            button {
                 @include button;
             }
         }
@@ -66,7 +89,8 @@ body {
     footer{
         font-family: $bodyfont;
         color: $textcolor;
-        margin: 30px 0 0 60px;
+        margin-top: 30px;
+        margin-left: 60px;
     }
 }
 
